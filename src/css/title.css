@@ -1,0 +1,22 @@
+.title {
+    font-size: 64px;
+}
+
+.title-box {
+    margin-bottom: 76px;
+    text-align: center;
+}
+
+.title-margin-b {
+    margin-bottom: 20px;
+}
+
+.top-title {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.bottom-title {
+    font-size: 17px;
+    margin-bottom: 16px;
+}

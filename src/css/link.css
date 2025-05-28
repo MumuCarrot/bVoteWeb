@@ -1,0 +1,15 @@
+.underline {
+    text-decoration: underline;
+}
+
+a.right-arrow,
+Link.right-arrow {
+    position: relative;
+}
+
+a.right-arrow::after,
+Link.right-arrow::after {
+    content: ' >';
+    font-size: inherit;
+    transition: 0.2s ease all;
+}
