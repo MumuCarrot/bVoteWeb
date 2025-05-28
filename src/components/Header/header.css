@@ -8,7 +8,6 @@ header {
     color: #fff;
     max-width: var(--content-width);
     margin: 0 auto;
-    transition: .2s ease all;
 }
 
 /* Header menu */
@@ -50,6 +49,7 @@ header {
 .HeaderMainText {
     font-size: 56px;
     margin-top: 20px;
+    transition: .4s ease all;
 }
 
 .user-profile-menu {
@@ -160,7 +160,7 @@ header {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
     .HeaderMainText {
         font-size: 24px;
     }
