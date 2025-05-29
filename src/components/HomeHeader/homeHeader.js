@@ -28,22 +28,22 @@ function HomeHeader() {
     return (
         <header className='home-header' onClick={setOverlayFalse}>
             {overlay && <div className='overlay'>
-                <Link to="#about">About bVote</Link>
-                <Link to="#documentation">Documentation</Link>
-                <Link to="#news">News</Link>
-                <Link to="#questions">Questions and answers</Link>
-                <Link to="#more">More</Link>
+                <Link to="/about">About bVote</Link>
+                <Link to="/documentation">Documentation</Link>
+                <Link to="/news">News</Link>
+                <Link to="/questions">Questions and answers</Link>
+                <Link to="/more">More</Link>
                 <hr/>
-                <Link to="#sign-up">Sign up</Link>
-                <Link to="#log-in">Log in</Link>
+                <Link to="/sign-up">Sign up</Link>
+                <Link to="/log-in">Log in</Link>
             </div>}
             <div className="HeaderMenu">
                 <ul>
-                    <li><Link to="#about">About bVote</Link></li>
-                    <li><Link to="#documentation">Documentation</Link></li>
-                    <li><Link to="#news">News</Link></li>
-                    <li><Link to="#questions">Questions and answers</Link></li>
-                    <li><Link to="#more">More</Link></li>
+                    <li><Link to="/about">About bVote</Link></li>
+                    <li><Link to="/documentation">Documentation</Link></li>
+                    <li><Link to="/news">News</Link></li>
+                    <li><Link to="/questions">Questions and answers</Link></li>
+                    <li><Link to="/more">More</Link></li>
                 </ul>
                 <div className='user-profile-menu'>
                     <button className='button' onClick={() => navigate('/signup')}>Sign up</button>
@@ -66,11 +66,11 @@ function HomeHeader() {
                         <Search placeholder={"Voting title or topic..."} submit={onClickSeacrhElections} />
                         <span className="HeaderSearchInputUnderline">
                             For example:
-                            <Link to="#election2025" className="HeaderSearchInputUnderlineLink">
+                            <Link to="/election2025" className="HeaderSearchInputUnderlineLink">
                                 election 2025
                             </Link>
                             or
-                            <Link to="#ukraine" className="HeaderSearchInputUnderlineLink">
+                            <Link to="/ukraine" className="HeaderSearchInputUnderlineLink">
                                 Ukraine
                             </Link>
                         </span>

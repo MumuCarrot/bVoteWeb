@@ -14,11 +14,11 @@ function Header() {
 
                 <div className='header__menu'>
                     <ul>
-                        <li><Link to="#about">About bVote</Link></li>
-                        <li><Link to="#documentation">Documentation</Link></li>
-                        <li><Link to="#news">News</Link></li>
-                        <li><Link to="#questions">Questions and answers</Link></li>
-                        <li><Link to="#more">More</Link></li>
+                        <li><Link to="/about">About bVote</Link></li>
+                        <li><Link to="/documentation">Documentation</Link></li>
+                        <li><Link to="/news">News</Link></li>
+                        <li><Link to="/questions">Questions and answers</Link></li>
+                        <li><Link to="/more">More</Link></li>
                     </ul>
                 </div>
 
