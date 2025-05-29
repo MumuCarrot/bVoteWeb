@@ -1,5 +1,5 @@
 import './home.css';
-import Header from '../../components/Header/header';
+import HomeHeader from '../../components/HomeHeader/homeHeader';
 import Footer from "../../components/Footer/footer";
 import {Link} from "react-router-dom";
 import Swiper from "../../components/Swiper/swiper";
@@ -53,7 +53,7 @@ function Home() {
 
     return (
         <div className="home">
-            <Header />
+            <HomeHeader />
             <main className="home-content">
 
                 <section className='home-content__section-white section'>

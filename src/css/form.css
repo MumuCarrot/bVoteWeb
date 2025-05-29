@@ -1,0 +1,16 @@
+.form {
+    width: 100%;
+}
+
+.form .input.input-margin {
+    margin: 3px 0 16px;
+}
+
+.form .input.input-margin-underline {
+    margin: 3px 0 8px;
+}
+
+.form__underline {
+    font-size: 12px;
+    margin-bottom: 16px;
+}

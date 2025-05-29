@@ -1,12 +1,12 @@
 import './error.css';
-import Header from "../../components/Header/header";
+import HomeHeader from "../../components/HomeHeader/homeHeader";
 import Footer from "../../components/Footer/footer";
 import {Link} from "react-router-dom";
 
 function ErrorPage() {
     return (
         <>
-            <Header />
+            <HomeHeader />
             <div className='error'>
                 <div className='error__container'>
                     <h1 className='error__title'>Error: 404</h1>
