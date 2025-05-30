@@ -1,10 +1,12 @@
 import './signIn.css';
 import {Link, useNavigate} from "react-router-dom";
 import {useState} from "react";
+import { useUser } from '../../context/UserContext';
 
 function SignIn() {
 
     const navigate = useNavigate();
+    const { setUser } = useUser();
 
     const [requested, setRequested] = useState(false);
     const [errors, setErrors] = useState({
@@ -68,6 +70,7 @@ function SignIn() {
             const data = await res.json();
 
             if (res.ok && data.success) {
+                setUser(data.user);
                 navigate("/");
             } else {
                 setErrors(prev => ({ ...prev, userNotExistRes: 'Invalid password or user login' }));

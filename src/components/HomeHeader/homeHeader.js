@@ -2,10 +2,12 @@ import './homeHeader.css';
 import Search from "../Search/search";
 import {Link, useNavigate} from "react-router-dom";
 import {useState} from "react";
+import {useUser} from "../../context/UserContext";
 
 function HomeHeader() {
 
     const navigate = useNavigate();
+    const { user } = useUser();
 
     function onClickSeacrhElections() {
         console.log("TO DO: onClickSeacrhElections");
@@ -34,8 +36,15 @@ function HomeHeader() {
                 <Link to="/questions">Questions and answers</Link>
                 <Link to="/more">More</Link>
                 <hr/>
-                <Link to="/sign-up">Sign up</Link>
-                <Link to="/log-in">Log in</Link>
+                {user ? (
+                        <Link to="/profile">My Profile</Link>
+                    ) : (
+                        <>
+                            <Link to="/sign-up">Sign up</Link>
+                            <Link to="/log-in">Log in</Link>
+                        </>
+                    )
+                }
             </div>}
             <div className="HeaderMenu">
                 <ul>
@@ -46,8 +55,15 @@ function HomeHeader() {
                     <li><Link to="/more">More</Link></li>
                 </ul>
                 <div className='user-profile-menu'>
-                    <button className='button' onClick={() => navigate('/signup')}>Sign up</button>
-                    <Link to="/login" className='underline'>Log in</Link>
+                    {user ? (
+                        <Link to="/profile">My Profile</Link>
+                    ) : (
+                        <>
+                            <button className='button' onClick={() => navigate('/signup')}>Sign up</button>
+                            <Link to="/login" className='underline'>Log in</Link>
+                        </>
+                    )
+                    }
                 </div>
                 <button className="nav-btn" onClick={setOverlayTrue}>
                     <span className="nav-btn-line"></span>
