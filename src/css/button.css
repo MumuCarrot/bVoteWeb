@@ -24,3 +24,7 @@
 .button-full-width {
     width: 100%;
 }
+
+.button:disabled {
+    background-color: #222222;
+}

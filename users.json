@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "email": "testuser1@vano.com",
+    "password": "password123",
+    "username": "Vano Account",
+    "role": "admin",
+    "passportData": "000000000",
+    "phoneNumber": "+1234567890",
+    "publicKey": "bububu",
+    "creationDate": "2023-10-01T12:00:00Z",
+    "additionalData": []
+  }
+]
