@@ -12,7 +12,15 @@
     width: calc(100% - 24px);
 }
 
-.input.incorrect {
+.input--form-margin {
+    margin: 3px 0 16px;
+}
+
+.input--form-margin-underline {
+    margin: 3px 0 8px;
+}
+
+.input--red {
     border-color: red;
 }
 
@@ -22,6 +30,6 @@
     margin-bottom: 8px;
 }
 
-.password-label-box {
+.label__password-box {
     display: flex;
 }

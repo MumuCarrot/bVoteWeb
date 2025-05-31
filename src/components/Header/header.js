@@ -24,7 +24,7 @@ function Header() {
 
                 <div className='header__login-menu'>
                     <button className='button' onClick={() => navigate('/signup')}>Sign up</button>
-                    <Link to="/login" className='underline'>Log in</Link>
+                    <Link to="/login" className='link--underline'>Log in</Link>
                 </div>
             </div>
             <hr className='header__hr'/>

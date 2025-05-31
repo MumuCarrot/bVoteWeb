@@ -4,11 +4,11 @@ import {Link} from "react-router-dom";
 
 function SwiperItem(props) {
     return (
-        <div className="swiper-item">
+        <div className="swiper__item">
             <img src={props.image} alt={props.title} />
             <h3>{props.title}</h3>
             <p>{props.description}</p>
-            <Link to={props.link} className='underline right-arrow'>Learn more</Link>
+            <Link to={props.link} className='link--underline right-arrow'>Learn more</Link>
         </div>
     );
 }
@@ -51,9 +51,9 @@ function Swiper(props) {
 
     return (
         <div className='swiper'>
-            <div className="swiper-container">
+            <div className="swiper__box">
                 <div
-                    className="swiper-wrapper"
+                    className="swiper__wrapper"
                     style={{
                         transform: `translateX(-${currentIndex * (100 / visibleSlides)}%)`,
                         transition: 'transform 0.3s ease'
@@ -69,8 +69,8 @@ function Swiper(props) {
                     ))}
                 </div>
             </div>
-            {currentIndex > 0 && <button className="swiper-button-prev" onClick={handlePrev}>←</button>}
-            {currentIndex <= maxIndex - 1 && <button className="swiper-button-next" onClick={handleNext}>→</button>}
+            {currentIndex > 0 && <button className="swiper__button-prev" onClick={handlePrev}>←</button>}
+            {currentIndex <= maxIndex - 1 && <button className="swiper__button-next" onClick={handleNext}>→</button>}
         </div>
     );
 }

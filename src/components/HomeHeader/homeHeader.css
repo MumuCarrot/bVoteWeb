@@ -12,12 +12,12 @@
 
 /* HomeHeader menu */
 
-.HeaderMenu {
+.home-header__menu {
     display: flex;
     margin: 16px 30px;
 }
 
-.HeaderMenu ul {
+.home-header__menu ul {
     flex: 1;
     list-style: none;
     padding: 0;
@@ -26,63 +26,55 @@
     gap: 10px;
 }
 
-.HeaderMenu ul li {
+.home-header__menu ul li {
     padding: 16px;
 }
 
 /* HomeHeader main */
 
-.HeaderMain {
+.home-header__main {
     padding-top: 100px;
     text-align: center;
     color: #000;
 }
 
-.PicturePadding {
+.home-header__picture-padding {
     padding: 0 16px 0 0;
 }
 
-.HeaderMainText {
+.home-header__main-text {
     font-size: 56px;
     margin-top: 20px;
     transition: .4s ease all;
 }
 
-.user-profile-menu {
+.home-header__user-profile-menu {
     align-content: center;
 }
 
-.user-profile-menu > *:not(:last-child) {
+.home-header__user-profile-menu > *:not(:last-child) {
     margin-right: 10px;
 }
 
 /* Search */
 
-.HeaderSearch {
+.home-header__search {
     display: flex;
     padding: 50px 0 120px;
     justify-content: center;
 }
 
-.HeaderSearchInput {
+.home-header__search-input {
     flex: 0 0 40%;
     max-width: 40%;
     transition: .2s ease all;
 }
 
-.HeaderSearchInputUnderline {
+.home-header__search-input-underline {
     display: flex;
     text-align: left;
     padding: 0 20px;
     font-weight: 300;
-}
-
-.HeaderSearchInputUnderlineLink {
-    display: flex;
-    text-align: left;
-    padding: 0 3px;
-    font-weight: 300;
-    text-decoration: underline;
 }
 
 .overlay {
@@ -116,7 +108,7 @@
     background-color: lightgray;
 }
 
-.nav-btn {
+.home-header__nav-btn {
     display: none;
     width: 32px;
     height: 18px;
@@ -131,12 +123,12 @@
 }
 
 @media screen and (max-width: 900px) {
-    .HeaderMenu ul,
-    .user-profile-menu {
+    .home-header__menu ul,
+    .home-header__user-profile-menu {
         display: none;
     }
 
-    .nav-btn {
+    .home-header__nav-btn {
         display: flex;
         width: 32px;
         height: 18px;
@@ -150,14 +142,14 @@
         border-radius: 2px;
     }
 
-    .HeaderSearchInput {
+    .home-header__search-input {
         flex: 0 0 80%;
         max-width: 80%;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .HeaderMainText {
+    .home-header__main-text {
         font-size: 24px;
     }
 

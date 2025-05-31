@@ -46,7 +46,7 @@ function HomeHeader() {
                     )
                 }
             </div>}
-            <div className="HeaderMenu">
+            <div className="home-header__menu">
                 <ul>
                     <li><Link to="/about">About bVote</Link></li>
                     <li><Link to="/documentation">Documentation</Link></li>
@@ -54,39 +54,39 @@ function HomeHeader() {
                     <li><Link to="/questions">Questions and answers</Link></li>
                     <li><Link to="/more">More</Link></li>
                 </ul>
-                <div className='user-profile-menu'>
+                <div className='home-header__user-profile-menu'>
                     {user ? (
                         <Link to="/profile">My Profile</Link>
                     ) : (
                         <>
                             <button className='button' onClick={() => navigate('/signup')}>Sign up</button>
-                            <Link to="/login" className='underline'>Log in</Link>
+                            <Link to="/login" className='link--underline'>Log in</Link>
                         </>
                     )
                     }
                 </div>
-                <button className="nav-btn" onClick={setOverlayTrue}>
+                <button className="home-header__nav-btn" onClick={setOverlayTrue}>
                     <span className="nav-btn-line"></span>
                     <span className="nav-btn-line"></span>
                     <span className="nav-btn-line"></span>
                 </button>
             </div>
-            <div className="HeaderMain">
+            <div className="home-header__main">
                 <div className="PictureList">
-                    <img className="PicturePadding" src="/png/worldwide.png" alt="Worldwide"/>
+                    <img className="home-header__picture-padding" src="/png/worldwide.png" alt="Worldwide"/>
                     <img src="/png/logo.png" alt="bVote" />
                 </div>
-                <span className="HeaderMainText">World wide secure voting</span>
-                <div className="HeaderSearch">
-                    <div className="HeaderSearchInput">
+                <span className="home-header__main-text">World wide secure voting</span>
+                <div className="home-header__search">
+                    <div className="home-header__search-input">
                         <Search placeholder={"Voting title or topic..."} submit={onClickSeacrhElections} />
-                        <span className="HeaderSearchInputUnderline">
+                        <span className="home-header__search-input-underline">
                             For example:
-                            <Link to="/election2025" className="HeaderSearchInputUnderlineLink">
+                            <Link to="/election2025" className="link--inline-padding">
                                 election 2025
                             </Link>
                             or
-                            <Link to="/ukraine" className="HeaderSearchInputUnderlineLink">
+                            <Link to="/ukraine" className="link--inline-padding">
                                 Ukraine
                             </Link>
                         </span>

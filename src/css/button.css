@@ -21,10 +21,10 @@
     transform: translateY(0px);
 }
 
-.button-full-width {
-    width: 100%;
-}
-
 .button:disabled {
     background-color: #222222;
+}
+
+.button--width-max {
+    width: 100%;
 }

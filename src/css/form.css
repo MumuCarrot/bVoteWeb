@@ -2,16 +2,12 @@
     width: 100%;
 }
 
-.incorrect_message {
+.form__error-message {
+    font-size: 12px;
+}
+
+.form__error-message--red {
     color: red;
-}
-
-.form .input.input-margin {
-    margin: 3px 0 16px;
-}
-
-.form .input.input-margin-underline {
-    margin: 3px 0 8px;
 }
 
 .form__underline {

@@ -3,7 +3,7 @@
     background-color: var(--wrapper-color);
 }
 
-.home-content {
+.home__content {
     display: flex;
     flex-flow: column;
     max-width: var(--content-width);
@@ -11,15 +11,15 @@
     margin: 0 auto;
 }
 
-.home-content__section-white {
+.home__section-white {
     background-color: white;
 }
 
-.home-content__section-gray {
+.home__section-gray {
     background-color: lightgray;
 }
 
-.home-content__section-white,
-.home-content__section-gray {
+.home__section-white,
+.home__section-gray {
     padding: 100px 80px 100px;
 }

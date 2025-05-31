@@ -7,8 +7,8 @@ function Footer() {
 
             </section>
             <hr className='footer__hr'/>
-            <section className='footer-bottom'>
-                <div className='footer-bottom-list'>
+            <section className='footer__bottom'>
+                <div className='footer__bottom-list'>
                     <a href='#a'>Home page</a>
                     <a href='#a'>What is bVote</a>
                     <a href='#a'>Questions and answers</a>

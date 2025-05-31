@@ -4,18 +4,18 @@
     position: relative;
 }
 
-.swiper-container {
+.swiper__box {
     display: flex;
     flex-flow: column;
 }
 
-.swiper-wrapper {
+.swiper__wrapper {
     display: flex;
     width: 100%;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+.swiper__button-next,
+.swiper__button-prev {
     position: absolute;
     top: 40%;
     transform: translateY(-50%);
@@ -31,21 +31,21 @@
     font-size: 20px;
 }
 
-.swiper-button-next {
+.swiper__button-next {
     right: 10px;
 }
 
-.swiper-button-prev {
+.swiper__button-prev {
     left: 10px;
 }
 
-.swiper-item {
+.swiper__item {
     flex: 1 1 19%;
     min-width: 19%;
     margin: 0 0.5%;
 }
 
-.swiper-item img {
+.swiper__item img {
     max-width: 100%;
     box-shadow: 0 2px 8px -2px rgba(66, 68, 90, 1);
     margin: 4px 0;
@@ -53,21 +53,21 @@
 }
 
 @media screen and (max-width: 1250px) {
-    .swiper-item {
+    .swiper__item {
         flex: 1 1 32.3%;
         min-width: 32.3%;
     }
 }
 
 @media screen and (max-width: 900px) {
-    .swiper-item {
+    .swiper__item {
         flex: 1 1 49%;
         min-width: 49%;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .swiper-item {
+    .swiper__item {
         flex: 1 1 99%;
         min-width: 99%;
     }

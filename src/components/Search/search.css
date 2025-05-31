@@ -1,4 +1,4 @@
-.Search {
+.search {
     display: flex;
     height: 48px;
     align-content: center;
@@ -6,7 +6,7 @@
     margin-bottom: 10px;
 }
 
-.SearchInput {
+.search__input {
     width: 100%;
     border: 0;
     border-radius: 100px;
@@ -17,7 +17,7 @@
     background: #fff;
 }
 
-.Submit {
+.submit {
     position: absolute;
     top: 50%;
     right: 20px;

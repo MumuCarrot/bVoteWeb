@@ -2,6 +2,7 @@ import './signIn.css';
 import {Link, useNavigate} from "react-router-dom";
 import {useState} from "react";
 import { useUser } from '../../context/UserContext';
+import ReturnToHomeButton from "../../components/ReturnToHomeButton/returnToHomeButton";
 
 function SignIn() {
 
@@ -84,9 +85,7 @@ function SignIn() {
 
     return (
         <div className="login">
-            <Link to='/' className='login__return'>
-                <img alt='Back arrow' src='/svg/arrow_back.svg'/>Home page
-            </Link>
+            <ReturnToHomeButton />
             <div className='login__content'>
                 <div className='login__top'>
                     <img className='login__logo' src='/png/logo.png' alt='bVote Logo' />
@@ -94,30 +93,30 @@ function SignIn() {
                 </div>
                 <div className='login__main'>
                     <form className="form" onSubmit={(e) => e.preventDefault()}>
-                        <p className='incorrect_message'>{errors.userNotExistRes}</p>
-                        <p className='incorrect_message'>{errors.unexpected}</p>
+                        <p className='form__error-message form__error-message--red'>{errors.userNotExistRes}</p>
+                        <p className='form__error-message form__error-message--red'>{errors.unexpected}</p>
                         <div className="form-group">
                             <label htmlFor="email" className='label'>Username or email address</label>
-                            <p className='incorrect_message'>{errors.userData}</p>
-                            <input type="email" className={`input input-margin ${errors.userData !== '' ? 'incorrect' : ''}`} id="email" name="email"
+                            <p className='form__error-message form__error-message--red'>{errors.userData}</p>
+                            <input type="email" className={`input input--form-margin ${errors.userData !== '' ? 'input--red' : ''}`} id="email" name="email"
                                    value={userData} onChange={(e) => setUserData(e.target.value)} required />
                         </div>
                         <div className="form-group">
-                            <div className='password-label-box'>
+                            <div className='label__password-box'>
                                 <label htmlFor="password" className='label'>Password</label>
-                                <Link to='/reset-password' className='underline'>Reset password</Link>
+                                <Link to='/reset-password' className='link--underline'>Reset password</Link>
                             </div>
-                            <p className='incorrect_message'>{errors.password}</p>
-                            <input type="password" className={`input input-margin ${errors.password !== '' ? 'incorrect' : ''}`} id="password" name="password"
+                            <p className='form__error-message form__error-message--red'>{errors.password}</p>
+                            <input type="password" className={`input input--form-margin ${errors.password !== '' ? 'input--red' : ''}`} id="password" name="password"
                                    value={password} onChange={(e) => setPassword(e.target.value)} required />
                         </div>
-                        <button type='button' className='button button-full-width' onClick={sendPostRequest} disabled={requested}>Sign in</button>
+                        <button type='button' className='button button--width-max' onClick={sendPostRequest} disabled={requested}>Sign in</button>
                         <div className='login__or'>Or</div>
-                        <button type='button' className='button button-full-width'>Sign in by personal key</button>
+                        <button type='button' className='button button--width-max'>Sign in by personal key</button>
                     </form>
                 </div>
                 <div className='login__bottom'>
-                    <p>Don't have an account? <Link to="/signup" className='underline'>Sign Up</Link></p>
+                    <p>Don't have an account? <Link to="/signup" className='link--underline'>Sign Up</Link></p>
                 </div>
             </div>
         </div>

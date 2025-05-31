@@ -54,23 +54,23 @@ function Home() {
     return (
         <div className="home">
             <HomeHeader />
-            <main className="home-content">
+            <main className="home__content">
 
-                <section className='home-content__section-white section'>
-                    <div className='section-item-list section-item__margin-r'>
+                <section className='home__section-white section'>
+                    <div className='section__item-list section__item--margin-r'>
                         <h2 className='title'>Let your voice be part of history!</h2>
                         <p className='subtitle'>bVoting is blockchain-based electronic voting, your vote is secure, which means your vote is definitely yours.</p>
-                        <Link to='/learn-more/blockchain' className='underline right-arrow'>Learn more</Link>
+                        <Link to='/learn-more/blockchain' className='link--underline right-arrow'>Learn more</Link>
                     </div>
-                    <div className='section-item-picture'>
-                        <div className='section-item-picture-container'>
+                    <div className='section__item-picture'>
+                        <div className='section__item-picture-box'>
                             <img src='/png/voting_demo.png' alt='Demonstration of election power' />
                         </div>
                     </div>
                 </section>
 
-                <section className='home-content__section-gray section'>
-                    <div className='section-item-list'>
+                <section className='home__section-gray section'>
+                    <div className='section__item-list'>
                         <div className='title-box'>
                             <p className='top-title'>For those who want to know the news</p>
                             <h2 className='title'>Hot topics</h2>
@@ -81,7 +81,7 @@ function Home() {
                     </div>
                 </section>
 
-                <section className='home-content__section-white section--column'>
+                <section className='home__section-white section--column'>
                     <div className='title-box'>
                         <p className='top-title'>For those who want to create an election</p>
                         <h2 className='title'>Simple election creation</h2>
@@ -89,24 +89,24 @@ function Home() {
                         <button className='button'>Learn more</button>
                     </div>
                     <div className='section'>
-                        <div className='section-item-picture'>
-                            <div className='section-item-picture-container'>
+                        <div className='section__item-picture'>
+                            <div className='section__item-picture-box'>
                                 <img src='/png/upload.png' alt='Upload button' />
                             </div>
                         </div>
-                        <div className='section-item-list section-item__margin-l'>
-                            <hr className='section-item-list__hr' />
-                            <p className='section-item-list__topic'>Anonymous or non-anonymous</p>
-                            <hr className='section-item-list__hr' />
-                            <p className='section-item-list__topic'>Private or public</p>
-                            <hr className='section-item-list__hr' />
-                            <p className='section-item-list__topic'>Digital or mixed</p>
-                            <hr className='section-item-list__hr' />
+                        <div className='section__item-list section__item--margin-l'>
+                            <hr className='section__item-list__hr' />
+                            <p className='section__item-list__topic'>Anonymous or non-anonymous</p>
+                            <hr className='section__item-list__hr' />
+                            <p className='section__item-list__topic'>Private or public</p>
+                            <hr className='section__item-list__hr' />
+                            <p className='section__item-list__topic'>Digital or mixed</p>
+                            <hr className='section__item-list__hr' />
                         </div>
                     </div>
                 </section>
 
-                <section className='home-content__section-gray'>
+                <section className='home__section-gray'>
                     <div className='title-box'>
                         <p className='top-title'>For those who want to vote</p>
                         <h2 className='title'>Reliable voting</h2>
@@ -114,19 +114,19 @@ function Home() {
                         <button className='button'>Learn more</button>
                     </div>
                     <div className='section'>
-                        <div className='section-item-picture'>
-                            <div className='section-item-picture-container'>
+                        <div className='section__item-picture'>
+                            <div className='section__item-picture-box'>
                                 <img src='/png/relibale_voting.png' alt='Blockchain chain' />
                             </div>
                         </div>
-                    <div className='section-item-list section-item__margin-l'>
-                            <hr className='section-item-list__hr' />
-                            <p className='section-item-list__topic'>Blockchain</p>
-                            <hr className='section-item-list__hr' />
-                            <p className='section-item-list__topic'>Proof of Work</p>
-                            <hr className='section-item-list__hr' />
-                            <p className='section-item-list__topic'>Cryptography</p>
-                            <hr className='section-item-list__hr' />
+                    <div className='section__item-list section__item--margin-l'>
+                            <hr className='section__item-list__hr' />
+                            <p className='section__item-list__topic'>Blockchain</p>
+                            <hr className='section__item-list__hr' />
+                            <p className='section__item-list__topic'>Proof of Work</p>
+                            <hr className='section__item-list__hr' />
+                            <p className='section__item-list__topic'>Cryptography</p>
+                            <hr className='section__item-list__hr' />
                         </div>
                     </div>
                 </section>

@@ -4,19 +4,6 @@
     width: 100%;
 }
 
-.login__return {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    padding: 16px;
-}
-
-.login__return > img {
-    height: 24px;
-    width: 24px;
-    margin-right: 16px;
-}
-
 .login__content {
     width: 320px;
     margin: 0 auto;

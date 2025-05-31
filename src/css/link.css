@@ -1,5 +1,9 @@
-.underline {
+.link--underline {
     text-decoration: underline;
+}
+
+.link--inline-padding {
+    padding: 0 3px;
 }
 
 a.right-arrow,
