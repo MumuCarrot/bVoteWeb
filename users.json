@@ -10,5 +10,17 @@
     "publicKey": "bububu",
     "creationDate": "2023-10-01T12:00:00Z",
     "additionalData": []
+  },
+  {
+    "id": 2,
+    "email": "ivan.kovalenko8080@gmail.com",
+    "password": "SUPERsigma8080",
+    "username": "MumuCarrot",
+    "role": "user",
+    "passportData": "",
+    "phoneNumber": "",
+    "publicKey": "",
+    "creationDate": "2025-05-31T14:39:25.619Z",
+    "additionalData": []
   }
 ]

@@ -11,9 +11,9 @@ function SignIn() {
 
     const [requested, setRequested] = useState(false);
     const [errors, setErrors] = useState({
-        userData: '',
+        username: '',
         password: '',
-        userNotExistRes: '',
+        userExistRes: '',
         unexpected: ''
     });
 
@@ -21,7 +21,7 @@ function SignIn() {
     const [password, setPassword] = useState('');
 
     const validators = {
-        userData: {
+        username: {
             regex: /^(?=[^@]*@?[^@]*$)([a-zA-Z0-9]+(-[a-zA-Z0-9]+)*@?)*[a-zA-Z0-9]+(\.[a-zA-Z]+)*$/,
             message: 'User data is not valid'
         },
@@ -46,12 +46,12 @@ function SignIn() {
 
         if (requested) return;
 
-        const newErrors = validateAllFields({ userData, password });
+        const newErrors = validateAllFields({ username: userData, password });
 
         setErrors(prev => ({
             ...prev,
             ...newErrors,
-            userNotExistRes: '',
+            userExistRes: '',
             unexpected: ''
         }));
 
@@ -65,7 +65,7 @@ function SignIn() {
             const res = await fetch('/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ userData, password }),
+                body: JSON.stringify({ username: userData, password }),
             });
 
             const data = await res.json();
@@ -74,7 +74,7 @@ function SignIn() {
                 setUser(data.user);
                 navigate("/");
             } else {
-                setErrors(prev => ({ ...prev, userNotExistRes: 'Invalid password or user login' }));
+                setErrors(prev => ({ ...prev, userExistRes: 'Invalid password or user login' }));
             }
         } catch (err) {
             setErrors(prev => ({ ...prev, unexpected: err }));
@@ -93,12 +93,12 @@ function SignIn() {
                 </div>
                 <div className='login__main'>
                     <form className="form" onSubmit={(e) => e.preventDefault()}>
-                        <p className='form__error-message form__error-message--red'>{errors.userNotExistRes}</p>
+                        <p className='form__error-message form__error-message--red'>{errors.userExistRes}</p>
                         <p className='form__error-message form__error-message--red'>{errors.unexpected}</p>
                         <div className="form-group">
                             <label htmlFor="email" className='label'>Username or email address</label>
-                            <p className='form__error-message form__error-message--red'>{errors.userData}</p>
-                            <input type="email" className={`input input--form-margin ${errors.userData !== '' ? 'input--red' : ''}`} id="email" name="email"
+                            <p className='form__error-message form__error-message--red'>{errors.username}</p>
+                            <input type="email" className={`input input--form-margin ${errors.username !== '' ? 'input--red' : ''}`} id="email" name="email"
                                    value={userData} onChange={(e) => setUserData(e.target.value)} required />
                         </div>
                         <div className="form-group">
