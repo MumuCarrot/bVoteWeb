@@ -1,0 +1,132 @@
+/* HomeHeader */
+
+.homeHeader {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+        223deg,
+        rgba(175, 253, 134, 1) 0%,
+        rgba(165, 178, 243, 1) 100%
+    );
+    color: #fff;
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+/* HomeHeader menu */
+
+.homeHeader__menu {
+    display: flex;
+    margin: 16px 30px;
+}
+
+.homeHeader__menu ul {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.homeHeader__menu ul li {
+    padding: 16px;
+}
+
+/* HomeHeader main */
+
+.homeHeader__main {
+    padding-top: 100px;
+    text-align: center;
+    color: #000;
+}
+
+.homeHeader__picturePadding {
+    padding: 0 16px 0 0;
+}
+
+.homeHeader__mainText {
+    font-size: 56px;
+    margin-top: 20px;
+    transition: 0.4s ease all;
+}
+
+.homeHeader__userProfileMenu {
+    align-content: center;
+}
+
+.homeHeader__userProfileMenu > *:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Search */
+
+.homeHeader__search {
+    display: flex;
+    padding: 50px 0 120px;
+    justify-content: center;
+}
+
+.homeHeader__searchInput {
+    flex: 0 0 40%;
+    max-width: 40%;
+    transition: 0.2s ease all;
+}
+
+.homeHeader__searchInputUnderline {
+    display: flex;
+    text-align: left;
+    padding: 0 20px;
+    font-weight: 300;
+}
+
+.homeHeader__navBtn {
+    display: none;
+    width: 32px;
+    height: 18px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    margin: 17px 0 18px auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .homeHeader__menu ul,
+    .homeHeader__userProfileMenu {
+        display: none;
+    }
+
+    .homeHeader__navBtn {
+        display: flex;
+        width: 32px;
+        height: 18px;
+    }
+
+    .navBtnLine {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        border-radius: 2px;
+    }
+
+    .homeHeader__searchInput {
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .homeHeader__mainText {
+        font-size: 24px;
+    }
+
+    .PictureList img {
+        height: 40px;
+    }
+}
