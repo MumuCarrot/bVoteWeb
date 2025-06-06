@@ -12,6 +12,8 @@ export class UserService {
         try {
             fileContent = await fs.readFile(this.usersFilePath, 'utf8');
         } catch (readError: any) {
+            console.error("Login error: Users file not found or Failed to read users file");
+
             throw new HttpException(
                 {
                     success: false,
@@ -27,6 +29,8 @@ export class UserService {
         try {
             return JSON.parse(fileContent);
         } catch (parseError) {
+            console.error("Login error: Invalid JSON format in users file");
+
             throw new HttpException(
                 {
                     success: false,
@@ -39,6 +43,7 @@ export class UserService {
 
     async login(requestedUser: User): Promise<any> {
         if ((!requestedUser.email && !requestedUser.username) || !requestedUser.password) {
+            console.error("Login error: Email/Username and password are required");
             throw new HttpException(
                 {
                     success: false,
@@ -58,6 +63,8 @@ export class UserService {
         }
 
         if (!foundUser) {
+            console.error("Login error: Invalid credentials");
+
             throw new HttpException(
                 {
                     success: false,

@@ -92,7 +92,7 @@ function Page() {
         setRequested(true);
 
         try {
-            const res = await fetch('/create-user', {
+            const res = await fetch(process.env.NEXT_PUBLIC_SERVER_URL + '/create-user', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password, username }),

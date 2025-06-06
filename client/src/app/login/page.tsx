@@ -89,10 +89,12 @@ function Page() {
         setRequested(true);
 
         try {
-            const res = await fetch('/login', {
+            const res = await fetch(process.env.NEXT_PUBLIC_SERVER_URL + '/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username: userData, password }),
+                body: userData.includes("@") ?
+                    JSON.stringify({ email: userData, password }) :
+                    JSON.stringify({ username: userData, password }),
             });
 
             const data = await res.json();
