@@ -1,10 +1,16 @@
-import { Controller, Get, Render } from '@nestjs/common';
+import { Controller, Get, Render, Req, Res } from '@nestjs/common';
+import { Renderer, RenderService } from 'nest-next';
 
-@Controller()
+@Controller('*')
 export class AppController {
+    constructor(private readonly renderService: RenderService) {}
+
     @Get()
-    @Render('_app')
-    home() {
-        return {};
+    async renderPage(@Req() req, @Res() res) {
+        let render: Renderer | undefined = this.renderService.getRenderer();
+        if (!render) {
+            throw new Error('RenderService not initialized')
+        }
+        return render(req, res, '/');
     }
 }

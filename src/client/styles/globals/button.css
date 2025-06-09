@@ -1,0 +1,30 @@
+.button {
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    padding: 16px 32px;
+    border-radius: 20px;
+    border: 0;
+    cursor: pointer;
+    transition: 0.2s ease all;
+}
+
+.button:hover {
+    background-color: #222222;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.button:active {
+    background-color: black;
+    color: white;
+    transform: translateY(0px);
+}
+
+.button:disabled {
+    background-color: #222222;
+}
+
+.button--width-max {
+    width: 100%;
+}
