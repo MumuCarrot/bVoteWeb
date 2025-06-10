@@ -2,7 +2,7 @@
     "name": "b-vote-web",
     "scripts": {
         "prebuild": "rimraf dist",
-        "build": "npm build:next && npm build:nest",
+        "build": "npm run build:next && npm run build:nest",
         "build:next": "next build",
         "build:nest": "nest build --path ./tsconfig.server.json",
         "start": "node ./dist/server/main.js",
@@ -27,6 +27,7 @@
         "rxjs": "^7.8.1"
     },
     "devDependencies": {
+        "rimraf": "^3.0.2",
         "@eslint/eslintrc": "^3.2.0",
         "@eslint/js": "^9.18.0",
         "@nestjs/cli": "^11.0.0",

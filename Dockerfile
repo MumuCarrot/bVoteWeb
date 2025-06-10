@@ -4,13 +4,11 @@ WORKDIR /app
 
 COPY . .
 
-RUN cd src && npm install
-RUN cd ui && npm install
+RUN npm install
 
-RUN cd src && npm run build
-RUN cd server && npm run build
+RUN npm run build
 
 EXPOSE 3000
 EXPOSE 4000
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "start:dev"]
